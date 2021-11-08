@@ -9,12 +9,13 @@ use Symfony\Component\Routing\Annotation\Route;
 class AppController extends AbstractController
 {
     /**
-     * @Route("/", name="app")
+     * @Route("/test", name="test")
      */
     public function index(): Response
     {
-        return $this->render('app/index.html.twig', [
-            'controller_name' => 'AppController',
+        return $this->json([
+            'message' => 'Welcome to your new controller!',
+            'path' => 'src/Controller/AppController.php',
         ]);
     }
 }
